@@ -1,0 +1,43 @@
+.monty-project-uploader {
+    padding: 4px 0 10px;
+    max-width: 850px
+}
+
+.monty-demo-current {
+    background: #f0f4e9;
+    border: 1px solid #ccd6be;
+    border-radius: 5px;
+    padding: 12px 14px;
+    font-weight: 600
+}
+
+.monty-project-zip {
+    display: block;
+    max-width: 100%;
+    margin: 18px 0 10px
+}
+
+.monty-upload-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px 0 10px
+}
+
+.monty-upload-status {
+    font-weight: 600;
+    line-height: 1.6
+}
+
+.monty-upload-status.is-error {
+    color: #b32d2e
+}
+
+.monty-demo-preview {
+    display: inline-block;
+    margin: 0 0 10px
+}
+
+.monty-demo-preview[hidden] {
+    display: none
+}

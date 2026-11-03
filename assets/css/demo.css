@@ -1,0 +1,49 @@
+/* A discreet return path and an honest demonstration label for bundled projects. */
+.monty-demo-notice {
+    position: fixed !important;
+    right: 16px !important;
+    bottom: 16px !important;
+    z-index: 2147483646 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    font: 11px/1.4 Arial, sans-serif !important;
+    background: #151713 !important;
+    color: #f1f2e9 !important;
+    padding: 10px 14px !important;
+    border: 1px solid #d0fa7960 !important;
+    border-radius: 30px !important;
+    box-shadow: 0 5px 25px #0004 !important;
+    max-width: calc(100vw - 32px) !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important
+}
+
+.monty-demo-notice a {
+    color: #d0fa79 !important;
+    text-decoration: none !important;
+    font: inherit !important;
+    white-space: nowrap !important
+}
+
+.monty-demo-notice button {
+    font: 16px/1 Arial, sans-serif !important;
+    color: #f1f2e9 !important;
+    background: none !important;
+    border: 0 !important;
+    padding: 0 0 0 3px !important;
+    cursor: pointer !important
+}
+
+.monty-demo-message {
+    position: fixed !important;
+    inset: auto 20px 75px !important;
+    z-index: 2147483647 !important;
+    background: #151713 !important;
+    color: #f3f2e9 !important;
+    padding: 18px !important;
+    border: 1px solid #d0fa79 !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+    font: 13px/1.5 Arial, sans-serif !important
+}

@@ -1,0 +1,233 @@
+/*
+Theme Name: Monty Chaudhary Portfolio
+Theme URI: https://github.com/stocker7767
+Author: Monty Chaudhary
+Author URI: https://github.com/stocker7767
+Description: Monty's interactive portfolio, with a personal hero, native project management, project ZIP uploads, same-domain website demos, live previews and an interaction playground. No page builder or additional plugin is required.
+Version: 1.1.0
+Requires at least: 6.3
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: monty-portfolio
+Tags: portfolio, custom-colors, custom-background, featured-images, translation-ready
+*/
+
+/* The visual design lives in assets/css; these rules provide WordPress integration. */
+.admin-bar .site-header {
+    top: 32px
+}
+
+@media(max-width:782px) {
+    .admin-bar .site-header {
+        top: 46px
+    }
+}
+
+@media(max-width:600px) {
+    .admin-bar .site-header {
+        top: 0
+    }
+}
+
+.wp-content-shell {
+    max-width: 900px;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding: 70px 28px 100px
+}
+
+.wp-content-shell h1 {
+    font: 500 clamp(35px, 6vw, 64px)/1.1 var(--display);
+    letter-spacing: -2px
+}
+
+.wp-content-shell h2,
+.wp-content-shell h3,
+.wp-content-shell h4 {
+    letter-spacing: -.5px;
+    font-family: var(--display);
+    line-height: 1.3
+}
+
+.wp-content-shell h2 {
+    font-size: 32px
+}
+
+.wp-content-shell h3 {
+    font-size: 25px
+}
+
+.wp-content-shell p,
+.wp-content-shell li {
+    font-size: 16px;
+    line-height: 1.8
+}
+
+.wp-content-shell img,
+.wp-content-shell video,
+.wp-content-shell iframe {
+    max-width: 100%;
+    height: auto
+}
+
+.wp-content-shell a:not(.button) {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: var(--accent)
+}
+
+[data-theme=light] .wp-content-shell a:not(.button) {
+    color: #4e6b25
+}
+
+.wp-content-shell .entry-meta {
+    font-size: 12px;
+    color: var(--muted)
+}
+
+.wp-content-shell article+article {
+    border-top: 1px solid var(--line);
+    margin-top: 48px;
+    padding-top: 28px
+}
+
+.wp-content-shell .alignwide {
+    max-width: 1100px
+}
+
+.wp-content-shell .alignfull {
+    width: 100%
+}
+
+.wp-content-shell pre,
+.wp-content-shell blockquote {
+    background: var(--panel);
+    padding: 22px;
+    border-radius: 12px;
+    overflow: auto
+}
+
+.wp-content-shell table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+.wp-content-shell th,
+.wp-content-shell td {
+    border: 1px solid var(--line);
+    padding: 12px;
+    text-align: left
+}
+
+.wp-content-shell input:not([type=checkbox]):not([type=radio]),
+.wp-content-shell textarea {
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--ink);
+    border-radius: 6px;
+    font: inherit
+}
+
+.wp-content-shell input[type=submit],
+.wp-content-shell button {
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-radius: 24px;
+    padding: 12px 22px;
+    font: inherit;
+    cursor: pointer
+}
+
+.wp-content-shell .search-form {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 28px 0
+}
+
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important
+}
+
+.screen-reader-text:focus {
+    clip: auto !important;
+    clip-path: none;
+    background: var(--accent);
+    color: var(--accent-ink);
+    display: block;
+    height: auto;
+    left: 12px;
+    top: 12px;
+    width: auto;
+    padding: 15px;
+    z-index: 100000
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0
+}
+
+.comment-list .children {
+    list-style: none;
+    border-left: 1px solid var(--line);
+    padding-left: 24px
+}
+
+.comment-list .comment-body {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--line)
+}
+
+.comment-form label {
+    display: block;
+    margin-bottom: 7px
+}
+
+.comment-form-cookies-consent label {
+    display: inline;
+    margin-left: 8px
+}
+
+.no-js-projects {
+    display: grid;
+    gap: 16px;
+    list-style: none;
+    padding: 0
+}
+
+.no-js-projects li {
+    border-bottom: 1px solid var(--line);
+    padding: 12px 0
+}
+
+.no-js-projects a {
+    text-decoration: underline;
+    margin-right: 18px
+}
+
+.fallback-hero {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    font: 26px var(--display);
+    color: var(--ink)
+}
+
+.project-card .cover {
+    pointer-events: none
+}
