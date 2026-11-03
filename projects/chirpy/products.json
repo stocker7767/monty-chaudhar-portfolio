@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Rainbow Ceramic Vase",
+    "price": 28,
+    "category": "Homeware",
+    "emoji": "\ud83c\udffa"
+  },
+  {
+    "id": 2,
+    "name": "Happy Days Mug",
+    "price": 16,
+    "category": "Homeware",
+    "emoji": "\u2615"
+  },
+  {
+    "id": 3,
+    "name": "Colour Pop Candle",
+    "price": 19,
+    "category": "Homeware",
+    "emoji": "\ud83d\udd6f\ufe0f"
+  },
+  {
+    "id": 4,
+    "name": "Abstract Art Print",
+    "price": 24,
+    "category": "Art",
+    "emoji": "\ud83d\uddbc\ufe0f"
+  },
+  {
+    "id": 5,
+    "name": "Little Joy Notebook",
+    "price": 12,
+    "category": "Stationery",
+    "emoji": "\ud83d\udcd2"
+  },
+  {
+    "id": 6,
+    "name": "Birthday Wishes Card",
+    "price": 4,
+    "category": "Cards",
+    "emoji": "\ud83d\udc8c"
+  },
+  {
+    "id": 7,
+    "name": "Flower Press Kit",
+    "price": 22,
+    "category": "Gifts",
+    "emoji": "\ud83c\udf38"
+  },
+  {
+    "id": 8,
+    "name": "Creative Gift Box",
+    "price": 35,
+    "category": "Gifts",
+    "emoji": "\ud83c\udf81"
+  },
+  {
+    "id": 9,
+    "name": "Colourful Coasters",
+    "price": 18,
+    "category": "Homeware",
+    "emoji": "\ud83c\udf08"
+  },
+  {
+    "id": 10,
+    "name": "Leeds Love Print",
+    "price": 25,
+    "category": "Art",
+    "emoji": "\ud83c\udfa8"
+  },
+  {
+    "id": 11,
+    "name": "Desk Planner",
+    "price": 15,
+    "category": "Stationery",
+    "emoji": "\ud83d\uddd3\ufe0f"
+  },
+  {
+    "id": 12,
+    "name": "Celebration Card",
+    "price": 4,
+    "category": "Cards",
+    "emoji": "\ud83c\udf89"
+  }
+]
