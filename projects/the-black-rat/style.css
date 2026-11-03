@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #151614;
+    --panel: #20231e;
+    --cream: #f4ebd9;
+    --muted: #bdb9aa;
+    --gold: #e2b56d;
+    --line: #44483f
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--cream);
+    font: 16px 'DM Sans', sans-serif
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .025em
+}
+
+h1 {
+    font-size: clamp(4rem, 10vw, 9rem);
+    line-height: .95;
+    margin: 20px 0
+}
+
+h2 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1.05;
+    margin: 12px 0 24px
+}
+
+h3 {
+    font-size: 1.6rem
+}
+
+p {
+    line-height: 1.75;
+    color: var(--muted)
+}
+
+.top {
+    background: var(--gold);
+    color: #181a15;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: #151614ed;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    padding: 16px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.logo {
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 1
+}
+
+.logo span {
+    color: var(--gold)
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 13px;
+    font-weight: 700
+}
+
+.navlinks a:hover {
+    color: var(--gold)
+}
+
+.menu {
+    display: none;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: white;
+    font-size: 24px;
+    padding: 7px 13px
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gold);
+    color: #171915;
+    padding: 14px 25px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    border: 1px solid var(--gold);
+    transition: .2s
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background: #f2ca8b
+}
+
+.btn.outline {
+    background: transparent;
+    color: var(--cream);
+    border-color: var(--cream)
+}
+
+.btn.outline:hover {
+    background: var(--cream);
+    color: var(--bg)
+}
+
+.hero {
+    min-height: 690px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #10110fee 4%, #10110f77 65%, #10110f44), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1800&q=85') center/cover
+}
+
+.hero .inner {
+    padding: 100px 7%;
+    max-width: 900px
+}
+
+.kicker {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    color: var(--gold)
+}
+
+.hero p {
+    font-size: 19px;
+    max-width: 600px
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 32px
+}
+
+.wrap {
+    padding: 95px 7%
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9%;
+    align-items: center
+}
+
+.intro img,
+.split img {
+    width: 100%;
+    height: 490px;
+    object-fit: cover
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 28px
+}
+
+.stat {
+    border-top: 1px solid var(--gold);
+    padding-top: 14px;
+    font: 600 21px Oswald
+}
+
+.stat small {
+    display: block;
+    color: var(--muted);
+    font: 12px 'DM Sans';
+    margin-top: 8px
+}
+
+.light {
+    background: #ede4d2;
+    color: #171915
+}
+
+.light p {
+    color: #555b52
+}
+
+.light .kicker {
+    color: #94672b
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    overflow: hidden
+}
+
+.card img {
+    height: 255px;
+    width: 100%;
+    object-fit: cover
+}
+
+.card .body {
+    padding: 25px
+}
+
+.card p {
+    min-height: 80px
+}
+
+.card h3 {
+    margin: 0
+}
+
+.light .card {
+    background: #fffaf0;
+    border-color: #d4cbb8
+}
+
+.strip {
+    background: var(--gold);
+    color: #171915;
+    padding: 24px;
+    text-align: center;
+    font: 600 20px Oswald;
+    letter-spacing: .05em;
+    text-transform: uppercase
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8%;
+    align-items: center
+}
+
+.pagehero {
+    padding: 110px 7% 95px;
+    background: linear-gradient(110deg, #151614 15%, #262c22);
+    border-bottom: 1px solid var(--line)
+}
+
+.pagehero h1 {
+    font-size: clamp(3.5rem, 8vw, 7rem)
+}
+
+.pagehero p {
+    max-width: 690px;
+    font-size: 19px
+}
+
+.featuregrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px
+}
+
+.feature {
+    padding: 35px;
+    background: var(--panel);
+    border: 1px solid var(--line)
+}
+
+.feature h3 {
+    color: var(--gold);
+    margin: 0
+}
+
+.hours {
+    width: 100%;
+    border-collapse: collapse
+}
+
+.hours td {
+    padding: 15px;
+    border-bottom: 1px solid var(--line)
+}
+
+.hours td:last-child {
+    text-align: right;
+    color: var(--gold);
+    font-weight: 700
+}
+
+.faq details {
+    border-bottom: 1px solid var(--line);
+    padding: 22px 0
+}
+
+.faq summary {
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.faq p {
+    margin-bottom: 0
+}
+
+.contactlinks a {
+    display: block;
+    margin: 16px 0;
+    color: var(--gold);
+    font-weight: 700;
+    overflow-wrap: anywhere
+}
+
+.map {
+    width: 100%;
+    height: 380px;
+    border: 0;
+    filter: grayscale(.7)
+}
+
+.footer {
+    background: #0d0f0c;
+    border-top: 1px solid var(--line);
+    padding: 65px 7% 25px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px
+}
+
+.footer a {
+    display: block;
+    margin: 12px 0;
+    color: var(--muted);
+    font-size: 13px
+}
+
+.footer .fine {
+    grid-column: 1/-1;
+    border-top: 1px solid var(--line);
+    padding-top: 22px;
+    font-size: 12px;
+    color: var(--muted)
+}
+
+.badge {
+    border: 1px solid var(--gold);
+    display: inline-block;
+    color: var(--gold);
+    padding: 8px 12px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .1em
+}
+
+.notice {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 20px
+}
+
+.photo {
+    position: relative
+}
+
+.photo:after {
+    content: 'THACKLEY • YORKSHIRE';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: var(--gold);
+    color: #161915;
+    padding: 12px;
+    font: 600 15px Oswald
+}
+
+@media(max-width:850px) {
+    .navlinks {
+        display: none;
+        position: absolute;
+        top: 66px;
+        left: 0;
+        right: 0;
+        background: #171a16;
+        padding: 20px 7%;
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 1px solid var(--line)
+    }
+
+    .navlinks.open {
+        display: flex
+    }
+
+    .menu {
+        display: block
+    }
+
+    .intro,
+    .split {
+        grid-template-columns: 1fr
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .footer>div:first-child {
+        grid-column: 1/-1
+    }
+}
+
+@media(max-width:580px) {
+    .hero {
+        min-height: 610px
+    }
+
+    .hero .inner {
+        padding: 75px 6%
+    }
+
+    .wrap {
+        padding: 65px 6%
+    }
+
+    .cards,
+    .featuregrid {
+        grid-template-columns: 1fr
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .footer {
+        grid-template-columns: 1fr
+    }
+
+    .footer>div:first-child {
+        grid-column: auto
+    }
+
+    .intro img,
+    .split img {
+        height: 330px
+    }
+
+    .card p {
+        min-height: auto
+    }
+}

@@ -1,0 +1,383 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.hero_section{
+    background-image: url(images/Background\ Image.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    padding-right: 30px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+nav ul li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+nav ul li a:hover{
+    color: wheat;
+    transform: scale(1.1);
+}
+main{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.main_info{
+    margin-left: 80px;
+    max-width: 600px;
+    color: white;
+}
+.main_info h1{
+    font-size: 56px;
+    font-weight: 700;
+    line-height:1.2 ;
+}
+.main_info .subtitle{
+    font-size: 36px;
+    font-weight: 600;
+    
+}
+.subtitle_color{
+    font-size: 56px;
+    font-weight: 700;
+    color: #ffcc00;
+    line-height:1.2 ;
+}
+.hero_hr{
+    border: none;
+    height: 5px;
+    background-color: #fff;
+    width: 100%;
+    margin: 20px 0px;
+}
+.main_info p{
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.cta_btn{
+    margin-top:25px ;
+    padding: 14px 32px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #003366;
+    font-weight: 600;
+    background-color: #ffcc00;
+}
+.services{
+display: grid;
+grid-template-rows: 1fr;
+text-align: center;
+padding: 50px 0px;
+background-image: url(images/Service\ bg.jpg);
+color: #003366;
+}
+.services h2{
+    font-size: 36px;
+    font-weight:700;
+    position: relative;
+}
+.services h2::before{
+    content: "";
+    display: block;
+    width: 800px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    z-index: 2;
+}
+.services h2::after{
+    content: "";
+    display: block;
+    width: 800px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    z-index: 2;
+}
+
+.services_card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+}
+.services_card hr{
+    width: 80%;
+    margin-left: 50px;
+    height: 5px;
+    background-color: #003366;
+}
+.services_card img{
+    width: 35%;
+    height: 50%;
+}
+.services_container{
+    margin-top: 20px;
+    border-radius: 50px;
+    height: 100%;
+    width: 30%;
+    border-style: none;
+    background-color: white;
+    box-shadow:10px 5px 15px 5px #003366;
+    
+}
+.services_container h3{
+    font-size: 45px;
+    font-weight: 700;
+    margin: 8px;
+}
+.services_container p{
+  font-size: 25px;
+  font-weight: 700;
+}
+.why_us{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    color: white;
+    padding: 30px 0px;
+    background-image: url(images/Why\ us.jpg);
+}
+.why_us h2{
+    font-size: 36px;
+    font-weight:700;
+    position: relative; 
+}
+.why_us h2::before{
+    content: "";
+    display: block;
+    width: 790px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    left: 20px;
+    top: 20%;
+    z-index: 2;
+}
+.why_us h2::after{
+    content: "";
+    display: block;
+    width: 790px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    right: 20px;
+    top: 20%;
+    z-index: 2;
+}
+.why_us_card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.why_us_container{
+    border: groove;
+    background-color: #003366;
+    color: white;
+    font-size: 32px;
+    padding: 32px 32px;
+    border-radius: 10px;
+    border: none;
+}
+.pricing{
+    display: grid;
+    grid-template-rows: auto auto;
+    text-align: center;
+    padding: 30px 0px;
+    color: #003366;
+    background-image: url(images/Service\ bg.jpg);
+    
+}
+.pricing h2{
+     font-size: 36px;
+    font-weight:700;
+    position: relative; 
+    
+}
+.pricing h2::before{
+    content: "";
+    display: block;
+    width: 790px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+}
+.pricing h2::after{
+    content: "";
+    display: block;
+    width: 790px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+}
+.pricing_cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 50px;
+}
+.pricing_container{
+    width: 20%;
+    background-color: #fff;
+    box-shadow:10px 5px 15px 5px #003366;
+}
+.pricing_container h3{
+    font-size: 40px;
+    font-weight: 700;
+    padding: 15px;
+    color: white;
+    background: #003366;
+}
+.pricing_container .price{
+    font-size: 50px;
+    padding: 20px 0px;
+}
+.pricing_container hr{
+    width: 80%;
+    margin-left: 40px;
+    border: none;
+    height: 2px;
+    background: #003366;
+}
+.pricing_container p{
+    font-size: 30px;
+    padding: 30px;
+    font-weight: 700;
+}
+.pricing_container button{
+    display: inline-block;
+    padding: 13px 45px;
+    margin: 20px ;
+    border-radius: 50px;
+    font-size: 25px;
+    background-color: #003366;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+.pricing_container button:hover{
+    color: #ffcc00;
+    transform: scale(1,1.01);
+}
+.contact_us{
+    display: grid;
+    grid-template-rows: auto auto;
+    text-align: center;
+    padding: 30px 0px;
+    color: #003366;
+    background-image:url(images/get\ in\ touch.jpg);
+}
+.contact_us h2{
+    font-size: 40px;
+    font-weight: 700;
+    position: relative;
+}
+.contact_us h2:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 780px;
+    height: 2px;
+    background: #003366;
+    top: 50%;
+    left: 20px;
+}
+.contact_us h2:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 780px;
+    height: 2px;
+    background: #003366;
+    top: 50%;
+    right: 20px;
+}
+.contact_form{
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    margin-left: auto;
+    margin-right: 40px;
+}
+.contact_form input,
+.contact_form textarea{
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-family: inherit;
+}
+.contact_form input:focus,
+.contact_form textarea:focus{
+    border-color: #1e90ff;
+    box-shadow: 0 0 0 2px rgba(30,144,255,0.2);
+}
+.contact_form button{
+    align-self: flex-end; /* pushes button to right */
+    padding: 12px 30px;
+    background-color: #ffcc00;
+    color: #003366;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.contact_form button:hover{
+    background-color: #f2b800;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 15px;
+    background-color: #003366;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}

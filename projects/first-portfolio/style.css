@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgb(170, 170, 247);
+    width: auto;
+}
+
+.logo {
+    font-size: 30px;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.list a {
+    display: inline-block;
+    font-size: 22px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    color: black;
+}
+
+.list a:hover {
+    color: wheat;
+    transform: scale(1.2);
+}
+
+.about_me {
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f8f9ff;
+    height: auto;
+}
+
+.para {
+    width: 45%;
+    text-align: center;
+    padding: 10px;
+}
+
+.para h1 {
+    font-size: 50px;
+}
+
+.para p {
+    font-size: 20px;
+}
+
+.photo {
+    padding: 20px;
+}
+
+.photo img {
+    border-radius: 50%;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    padding: 40px;
+}
+
+.skills div {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.skills h1 {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    border-radius: 10%;
+    background-color: rgb(170, 170, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: white;
+}
+
+.skills p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #444;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    padding: 40px;
+      
+}
+
+.projects div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    height: auto;
+     background-color: #f8f9ff;
+}
+
+.project_a {
+    width: auto;
+    height: 50vh;
+}
+
+.project_a .para_project {
+    width: 40%;
+    display: inline;
+    text-align: center;
+ 
+}
+.para_project h1{
+    font-size: 50px;
+}
+.para_project p{
+    font-size: 20px;
+}
+.project_a .img_poject img{
+width: 100%;
+max-width: 400px;
+height: 450px;
+object-fit: cover;
+display: block;
+border-radius: 25%;
+}
+.contacts{
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 80px;
+  background-color: rgb(170, 170, 247);
+}
+.why_contact{
+     width: 45%;
+     text-align: center;
+    
+}
+.why_contact h1{
+    font-size: 50px;
+     margin-bottom: 15px;
+}
+.why_contact p{
+    font-size: 20px;
+     line-height: 1.6;
+}
+.form{
+  width: 45%;
+  background: #f8f9ff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+}
+.input_type{
+    font-size: 20px;
+}
+form textarea {
+  height: 120px;
+  font-size: 20px;
+  resize: none;
+}
+form input[type="submit"] {
+  background: rgb(170, 170, 247);
+  color: #fff;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+form input[type="submit"]:hover {
+  background: rgb(150, 150, 230);
+}
+footer{
+display: flex;
+justify-content: space-between;
+background-color: #f8f9ff;
+}

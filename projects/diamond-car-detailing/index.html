@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Diamond Car Detailing Leeds | Demo</title>
+    <meta name="description"
+        content="Premium car detailing in Leeds. Demo website concept for Diamond Car Detailing Leeds.">
+    <style>
+        :root {
+            --bg: #07090b;
+            --panel: #0f1216;
+            --soft: #161b20;
+            --text: #f5f7f8;
+            --muted: #aab2bb;
+            --ice: #d8f5ff;
+            --line: #252c33;
+            --accent: #79d8ff;
+            --max: 1180px
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+            line-height: 1.55
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .wrap {
+            max-width: var(--max);
+            margin: auto;
+            padding: 0 24px
+        }
+
+        .nav {
+            position: fixed;
+            z-index: 20;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(7, 9, 11, .78);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, .07)
+        }
+
+        .navin {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            letter-spacing: .12em;
+            font-size: 13px
+        }
+
+        .gem {
+            width: 35px;
+            height: 35px;
+            border: 1px solid #7ddcff;
+            transform: rotate(45deg);
+            display: grid;
+            place-items: center;
+            box-shadow: 0 0 25px rgba(121, 216, 255, .18)
+        }
+
+        .gem:after {
+            content: "D";
+            transform: rotate(-45deg);
+            font-size: 15px
+        }
+
+        .links {
+            display: flex;
+            gap: 28px;
+            color: #cbd2d8;
+            font-size: 14px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 20px;
+            border-radius: 4px;
+            background: var(--text);
+            color: #07090b;
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: .03em;
+            border: 1px solid var(--text);
+            transition: .2s
+        }
+
+        .btn:hover {
+            transform: translateY(-2px)
+        }
+
+        .btn.ghost {
+            background: transparent;
+            color: var(--text);
+            border-color: #58616a
+        }
+
+        .hero {
+            min-height: 820px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 76px;
+            background: linear-gradient(90deg, rgba(4, 6, 8, .97) 0%, rgba(4, 6, 8, .82) 42%, rgba(4, 6, 8, .24) 72%, rgba(4, 6, 8, .45)), url('https://images.unsplash.com/photo-1761321643410-5b3e17000f57?auto=format&fit=crop&w=1800&q=85') center/cover
+        }
+
+        .hero:after {
+            content: "";
+            position: absolute;
+            inset: auto 0 0;
+            height: 180px;
+            background: linear-gradient(transparent, var(--bg))
+        }
+
+        .heroContent {
+            position: relative;
+            z-index: 2;
+            max-width: 730px
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: .18em;
+            text-transform: uppercase
+        }
+
+        .eyebrow:before {
+            content: "";
+            width: 36px;
+            height: 1px;
+            background: var(--accent)
+        }
+
+        h1 {
+            font-size: clamp(54px, 7vw, 96px);
+            line-height: .94;
+            letter-spacing: -.055em;
+            margin: 24px 0 25px;
+            max-width: 800px
+        }
+
+        .shine {
+            color: transparent;
+            -webkit-text-stroke: 1px #d8f5ff;
+            text-shadow: 0 0 30px rgba(121, 216, 255, .12)
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #c5cbd0;
+            max-width: 590px
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 34px;
+            flex-wrap: wrap
+        }
+
+        .trust {
+            display: flex;
+            gap: 30px;
+            margin-top: 54px;
+            color: #c6ccd1;
+            font-size: 13px
+        }
+
+        .trust b {
+            display: block;
+            color: white;
+            font-size: 22px;
+            margin-bottom: 2px
+        }
+
+        .section {
+            padding: 105px 0
+        }
+
+        .sectionHead {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+            margin-bottom: 44px
+        }
+
+        .section h2 {
+            font-size: clamp(38px, 5vw, 64px);
+            line-height: 1;
+            letter-spacing: -.045em;
+            margin: 12px 0
+        }
+
+        .sectionHead p {
+            max-width: 460px;
+            color: var(--muted)
+        }
+
+        .grid3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px
+        }
+
+        .card {
+            background: linear-gradient(145deg, #12161a, #0b0e11);
+            border: 1px solid var(--line);
+            padding: 34px;
+            min-height: 290px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .num {
+            font-size: 12px;
+            color: var(--accent);
+            letter-spacing: .16em
+        }
+
+        .card h3 {
+            font-size: 25px;
+            margin: 60px 0 12px
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        .card .arrow {
+            position: absolute;
+            right: 28px;
+            bottom: 25px;
+            font-size: 22px;
+            color: #8b969f
+        }
+
+        .feature {
+            background: #eef2f4;
+            color: #0a0c0e
+        }
+
+        .feature .eyebrow {
+            color: #28738f
+        }
+
+        .feature .eyebrow:before {
+            background: #28738f
+        }
+
+        .featureGrid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 70px;
+            align-items: center
+        }
+
+        .photo {
+            min-height: 590px;
+            background: url('https://images.unsplash.com/photo-1761321643410-5b3e17000f57?auto=format&fit=crop&w=1200&q=85') center/cover;
+            position: relative
+        }
+
+        .photo:after {
+            content: "DETAIL MATTERS";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: #071015;
+            color: #dff7ff;
+            padding: 17px 22px;
+            font-size: 11px;
+            letter-spacing: .2em
+        }
+
+        .feature h2 {
+            font-size: clamp(42px, 5vw, 68px);
+            line-height: 1;
+            letter-spacing: -.05em;
+            margin: 20px 0
+        }
+
+        .feature p {
+            color: #53606a
+        }
+
+        .ticks {
+            display: grid;
+            gap: 15px;
+            margin: 28px 0 36px
+        }
+
+        .tick {
+            padding: 15px 0;
+            border-bottom: 1px solid #cbd2d6;
+            font-weight: 700
+        }
+
+        .tick span {
+            color: #1680a6;
+            margin-right: 12px
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .step {
+            padding: 38px 25px;
+            border-right: 1px solid var(--line)
+        }
+
+        .step:last-child {
+            border-right: 0
+        }
+
+        .step small {
+            color: var(--accent)
+        }
+
+        .step h3 {
+            font-size: 20px;
+            margin: 28px 0 8px
+        }
+
+        .step p {
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        .review {
+            padding: 100px 0;
+            text-align: center
+        }
+
+        .stars {
+            letter-spacing: 7px;
+            color: #d9f5ff;
+            font-size: 20px
+        }
+
+        .quote {
+            font-size: clamp(30px, 4vw, 54px);
+            font-weight: 750;
+            letter-spacing: -.04em;
+            max-width: 850px;
+            margin: 24px auto
+        }
+
+        .review p {
+            color: var(--muted)
+        }
+
+        .cta {
+            margin: 0 24px 24px;
+            background: linear-gradient(120deg, #dff7ff, #a7ddec);
+            color: #061016;
+            padding: 80px 0
+        }
+
+        .ctaGrid {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            align-items: center
+        }
+
+        .cta h2 {
+            font-size: clamp(40px, 6vw, 72px);
+            line-height: .95;
+            letter-spacing: -.05em;
+            margin: 0
+        }
+
+        .cta p {
+            max-width: 490px;
+            color: #35505a
+        }
+
+        .cta .btn {
+            background: #071015;
+            color: white;
+            border-color: #071015
+        }
+
+        .footer {
+            padding: 55px 0 35px
+        }
+
+        .footerGrid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px
+        }
+
+        .footer p,
+        .footer a {
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        .footer h4 {
+            font-size: 12px;
+            letter-spacing: .15em;
+            text-transform: uppercase
+        }
+
+        .copy {
+            margin-top: 45px;
+            padding-top: 25px;
+            border-top: 1px solid var(--line);
+            font-size: 12px;
+            color: #6f7880
+        }
+
+        .demo {
+            position: fixed;
+            right: 14px;
+            bottom: 14px;
+            z-index: 30;
+            background: #f7d774;
+            color: #111;
+            padding: 9px 12px;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: .08em;
+            border-radius: 3px
+        }
+
+        @media(max-width:800px) {
+            .links {
+                display: none
+            }
+
+            .hero {
+                min-height: 730px
+            }
+
+            .trust {
+                gap: 18px
+            }
+
+            .grid3,
+            .steps,
+            .featureGrid,
+            .footerGrid {
+                grid-template-columns: 1fr
+            }
+
+            .steps {
+                border-bottom: 0
+            }
+
+            .step {
+                border-right: 0;
+                border-bottom: 1px solid var(--line)
+            }
+
+            .photo {
+                min-height: 390px
+            }
+
+            .sectionHead,
+            .ctaGrid {
+                align-items: flex-start;
+                flex-direction: column
+            }
+
+            .cta {
+                margin: 0 12px 12px
+            }
+
+            .section {
+                padding: 75px 0
+            }
+
+            h1 {
+                font-size: 58px
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="../../assets/css/demo.css">
+</head>
+
+<body>
+    <div class="demo">CONCEPT DEMO</div>
+    <nav class="nav">
+        <div class="wrap navin"><a class="brand" href="#top"><span class="gem"></span> DIAMOND CAR DETAILING</a>
+            <div class="links"><a href="#services">Services</a><a href="#process">Process</a><a href="#about">Why
+                    Diamond</a><a href="#contact">Contact</a></div><a class="btn" href="#contact">Get a Quote</a>
+        </div>
+    </nav>
+    <header class="hero" id="top">
+        <div class="wrap">
+            <div class="heroContent">
+                <div class="eyebrow">Car detailing · Leeds</div>
+                <h1>TURN HEADS.<br><span class="shine">DRIVE CLEAN.</span></h1>
+                <p class="lead">A premium detailing experience built around one thing: making your car look its best.
+                    Precision care, a clean finish and attention where it counts.</p>
+                <div class="actions"><a class="btn" href="#contact">Get Your Quote →</a><a class="btn ghost"
+                        href="tel:+441226652016">Call 01226 652016</a></div>
+                <div class="trust">
+                    <div><b>5.0★</b>Google rating</div>
+                    <div><b>11</b>public reviews</div>
+                    <div><b>Leeds</b>LS8 3PB</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section" id="services">
+            <div class="wrap">
+                <div class="sectionHead">
+                    <div>
+                        <div class="eyebrow">Care for every detail</div>
+                        <h2>YOUR CAR.<br>REFINED.</h2>
+                    </div>
+                    <p>This concept keeps the service menu intentionally flexible until Diamond confirms its exact
+                        packages and prices.</p>
+                </div>
+                <div class="grid3">
+                    <article class="card"><span class="num">01 / EXTERIOR</span>
+                        <h3>Exterior Detailing</h3>
+                        <p>A thorough exterior refresh designed to bring back gloss, clarity and a cleaner finish.</p>
+                        <span class="arrow">↗</span>
+                    </article>
+                    <article class="card"><span class="num">02 / INTERIOR</span>
+                        <h3>Interior Detailing</h3>
+                        <p>Focused interior care for the surfaces, seats, carpets and areas everyday cleaning misses.
+                        </p><span class="arrow">↗</span>
+                    </article>
+                    <article class="card"><span class="num">03 / BESPOKE</span>
+                        <h3>Full Vehicle Detail</h3>
+                        <p>Need more than a quick clean? Request a tailored quote based on your vehicle and its
+                            condition.</p><span class="arrow">↗</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="feature section" id="about">
+            <div class="wrap featureGrid">
+                <div class="photo"></div>
+                <div>
+                    <div class="eyebrow">Why Diamond</div>
+                    <h2>THE DIFFERENCE IS IN THE DETAILS.</h2>
+                    <p>Great detailing isn't about rushing a car through. It's about noticing the small things that
+                        change how the whole vehicle feels.</p>
+                    <div class="ticks">
+                        <div class="tick"><span>◆</span> Local Leeds detailing service</div>
+                        <div class="tick"><span>◆</span> 5.0 rating on the current business listing</div>
+                        <div class="tick"><span>◆</span> Quote-led approach for the right level of care</div>
+                    </div><a class="btn" href="#contact">Request a Quote</a>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="process">
+            <div class="wrap">
+                <div class="sectionHead">
+                    <div>
+                        <div class="eyebrow">Simple from start to shine</div>
+                        <h2>HOW IT WORKS.</h2>
+                    </div>
+                </div>
+                <div class="steps">
+                    <div class="step"><small>STEP 01</small>
+                        <h3>Tell us your car</h3>
+                        <p>Share your vehicle and what you want cleaned or restored.</p>
+                    </div>
+                    <div class="step"><small>STEP 02</small>
+                        <h3>Send the details</h3>
+                        <p>Add the condition and photos so the job can be understood properly.</p>
+                    </div>
+                    <div class="step"><small>STEP 03</small>
+                        <h3>Get your quote</h3>
+                        <p>Receive the right recommendation and price for your vehicle.</p>
+                    </div>
+                    <div class="step"><small>STEP 04</small>
+                        <h3>Bring back the shine</h3>
+                        <p>Confirm your detail and let the transformation begin.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="review">
+            <div class="wrap">
+                <div class="stars">★★★★★</div>
+                <div class="quote">“A five-star first impression before the customer even hands over the keys.”</div>
+                <p>Website concept direction · Actual customer review copy should be added only with Diamond's approval.
+                </p>
+            </div>
+        </section>
+        <section class="cta" id="contact">
+            <div class="wrap ctaGrid">
+                <div>
+                    <h2>READY FOR<br>THAT DIAMOND<br>FINISH?</h2>
+                </div>
+                <div>
+                    <p>Tell Diamond what you drive and what kind of detail you're looking for. A few details are enough
+                        to start the conversation.</p>
+                    <div class="actions"><a class="btn" href="tel:+441226652016">Call 01226 652016</a><a
+                            class="btn ghost" style="color:#071015;border-color:#52717b"
+                            href="https://www.google.com/maps/search/?api=1&query=27+Easterly+Cross+Leeds+LS8+3PB"
+                            target="_blank" rel="noopener">Find Us →</a></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="wrap">
+            <div class="footerGrid">
+                <div>
+                    <div class="brand"><span class="gem"></span> DIAMOND CAR DETAILING</div>
+                    <p style="max-width:390px;margin-top:20px">Premium car detailing concept for a local Leeds business.
+                        Built to turn search traffic into quote enquiries.</p>
+                </div>
+                <div>
+                    <h4>Location</h4>
+                    <p>27 Easterly Cross<br>Harehills<br>Leeds LS8 3PB</p>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p><a href="tel:+441226652016">01226 652016</a></p>
+                    <p>Listed hours: 05:00–19:00 daily</p>
+                </div>
+            </div>
+            <div class="copy">DEMO WEBSITE CONCEPT · NOT THE OFFICIAL DIAMOND CAR DETAILING LEEDS WEBSITE</div>
+        </div>
+    </footer>
+    <script src="../../assets/js/demo.js" defer></script>
+</body>
+
+</html>

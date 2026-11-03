@@ -1,0 +1,491 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*HEADER CONTAINING LOGO, NAV BAR and DOWNLOAD BUTTON*/
+header {
+    display: flex;
+    padding: 20px 0px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*HEADER LOGO*/
+.logo {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.half_color {
+    color: rgb(110, 15, 233);
+}
+
+/*HEADER NAV BAR*/
+.nav_list {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.nav_list li {
+    list-style: none;
+}
+
+.nav_list li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.nav_list li a:hover {
+    color: rgb(110, 15, 233);
+    text-decoration: underline;
+}
+
+/*DOWNLOAD CV BUTTON*/
+.cv_btn {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(110, 15, 233);
+    border-radius: 2px;
+    padding: 8px;
+}
+
+.cv_btn:hover {
+    text-decoration: underline;
+}
+
+/*INTRO SECTION THAT INCLUDES : INTRODUCTION WITH BUTTON AND SOCIAL MEDIA LINKS AND MY PHOTO ALONGSIDE*/
+.intro_section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    background-color: rgba(195, 159, 243, 0.363);
+    border-radius: 0% 0% 30% 0%;
+}
+
+/*INTRODUCTION SECTION WITH BUTTONS AND SOCIAL MEDIA LINKS*/
+.introduction {
+    display: grid;
+
+}
+
+.intro_hi {
+    color: rgb(110, 15, 233);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.my_intro h1 {
+    font-weight: 600;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.my_intro h2 {
+    font-size: 45px;
+    font-weight: 550;
+    color: rgb(110, 15, 233);
+    margin-bottom: 10px;
+}
+
+.my_intro_p {
+    color: black;
+    font-size: 20px;
+    font-weight: lighter;
+    margin-bottom: 15px;
+}
+
+.cntct_me_btn a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(110, 15, 233);
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.cv_me_btn {
+    margin-left: 15px;
+}
+
+.cntct_me_btn {
+    margin: 10px 1px;
+}
+
+.cntct_me_btn a:hover {
+    text-decoration: underline;
+}
+
+.social_media_links {
+    margin: 20px 0px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social_media_links a {
+    color: black;
+}
+
+/*MY PHOTO FOR PROFIL*/
+.my_photo1 img {
+    width: 100%;
+    border-radius: 30%;
+}
+
+/*ABOUT ME SECTION WILL START FROM HERE THATS INCLUDES MY PHOTO AND SOME INFO ABOUT ME*/
+.about_me {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 60px;
+}
+
+/*PHOTO*/
+.my_photo2 img {
+    width: 80%;
+    border-radius: 30%;
+}
+
+/*ABOUT ME SECTION*/
+.sec_1_about_me {
+    margin-bottom: 20px;
+}
+
+.sec_1_about_me h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: rgb(110, 15, 233);
+    font-weight: 600;
+}
+
+.sec_1_about_me h3 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: black;
+    font-weight: 600;
+}
+
+.sec_1_about_me hr {
+    width: 15%;
+    height: 4px;
+    background: rgb(110, 15, 233);
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+.sec_1_about_me p {
+    font-size: 18px;
+    color: black;
+    font-weight: 400;
+}
+
+/*my_contact_info*/
+.my_contact_info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    margin-top: 30px;
+}
+@media (max-width: 768px){
+
+    .sec_1_about_me p{
+        font-size:16px;
+        text-align:center;
+        line-height:1.6;
+    }
+
+    .my_contact_info{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+        text-align:center;
+    }
+
+}
+
+.my_contact_info p {
+    font-size: 20px;
+    border: solid;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    color: black;
+    padding: 20px;
+    border-color: rgb(110, 15, 233);
+}
+
+/*NOW ITS ABOUT MY SKILLS AND MY SKILLS IN CARD*/
+.my_skills {
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(195, 159, 243, 0.363);
+    gap: 30px;
+}
+
+.head_my_skills h2 {
+    color: rgb(110, 15, 233);
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.head_my_skills p {
+    color: black;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.cards_my_skills {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.cards_skill_info {
+    background-color: #fff;
+    border: 2px solid white;
+    padding: 35px 15px;
+    border-radius: 5px;
+}
+
+.cards_my_skills i {
+    padding: 10px;
+}
+
+.cards_my_skills div {
+    padding: 10px;
+}
+
+/*NOW ITS ABOUT MY PROJECTS AND MY PROJECTS IN CARD*/
+.my_projects {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    flex-direction: column;
+    padding: 35px 0px;
+
+}
+
+.head_my_projects h2 {
+    color: rgb(110, 15, 233);
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.head_my_projects p {
+    color: black;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.cards_my_projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    text-align: left;
+}
+
+.project_card {
+    border: solid grey;
+    border: none;
+    padding-bottom: 20px;
+    background-color: rgba(195, 159, 243, 0.363);
+}
+
+.project_card h3 {
+    font-size: 2rem;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.project_card p {
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.project_card a {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 400;
+}
+
+.project_card a:hover {
+    text-decoration: underline;
+}
+
+.my_experience {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: rgba(195, 159, 243, 0.363);
+    gap: 60px;
+    padding: 30px 0px;
+}
+
+.head_my_experience h2 {
+    color: rgb(110, 15, 233);
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.head_my_experience p {
+    color: black;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.detailing_info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.detailing_info div {
+    padding: 60px 10px;
+    text-wrap:initial ;
+    background: white;
+    border-radius: 5px;
+}
+
+.detailing_info p{
+    font-size: 1.5rem;
+
+}
+.detailing_info h2{
+    font-size:2rem;
+    color: rgb(110, 15, 233);
+   
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 25px 10px;
+    background-color: rgb(31, 31, 38);
+}
+.myself{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+.myself a{
+    text-decoration: none;
+    color: white;
+}
+.footer_myportfolio{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.myself p{
+font-weight: 100;
+font-size: 1.2rem;
+}
+.fa-brands{
+    padding-right: 10px;
+}
+.quick_links{
+     padding: 15px;
+}
+.quick_links a{
+     text-decoration: none;
+    color: white;   
+
+}
+.quick_links li{
+    list-style: none;
+    padding: 2px 0px;
+}
+.quick_links a:hover{
+    color: rgb(110, 15, 233);
+    text-decoration: underline;
+}
+.quick_links h2{
+    padding: 0px 0px 5px 0px;
+}
+.services{
+     padding: 15px;
+}
+.services a{
+     text-decoration: none;
+    color: white;   
+
+}
+.services li{
+    list-style: none;
+    padding: 2px 0px;
+}
+.services a:hover{
+    color: rgb(110, 15, 233);
+    text-decoration: underline;
+}
+.services h2{
+    padding: 0px 0px 5px 0px;
+}
+.contact_me{
+     padding: 15px;
+}
+.contact_me a{
+     text-decoration: none;
+    color: white;   
+
+}
+.contact_me li{
+    list-style: none;
+    padding: 2px 0px;
+}
+.contact_me a:hover{
+    color: rgb(110, 15, 233);
+    text-decoration: underline;
+}
+.contact_me h2{
+    padding: 0px 0px 5px 0px;
+}

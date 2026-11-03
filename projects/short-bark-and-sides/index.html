@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#193b34">
+    <meta name="description"
+        content="Short Bark & Sides dog grooming in Meanwood, Leeds. Friendly grooming, puppy hygiene and hand stripping. Concept website demo.">
+    <title>Short Bark & Sides | A Little More Wag</title>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght,SOFT@9..144,500,50;9..144,650,50&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --forest: #193b34;
+            --cream: #f7f3e9;
+            --lime: #d9ee8c;
+            --ink: #213b33;
+            --peach: #f4bba5
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: var(--cream);
+            color: var(--ink);
+            font-family: 'DM Sans', sans-serif
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Fraunces, Georgia, serif;
+            letter-spacing: -.045em
+        }
+
+        h1 {
+            font-size: clamp(3.6rem, 7.7vw, 8.3rem);
+            line-height: .96;
+            margin: 22px 0
+        }
+
+        h2 {
+            font-size: clamp(2.6rem, 5vw, 5rem);
+            line-height: 1.05;
+            margin: 12px 0 22px
+        }
+
+        p {
+            line-height: 1.7
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit
+        }
+
+        button {
+            cursor: pointer
+        }
+
+        .notice {
+            background: #d9ee8c;
+            text-align: center;
+            font-size: 11px;
+            letter-spacing: .1em;
+            padding: 8px;
+            font-weight: 700
+        }
+
+        .nav {
+            height: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            padding: 0 5%;
+            background: var(--cream);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 1px solid #d9dfd3
+        }
+
+        .brand {
+            font-family: Fraunces, serif;
+            font-weight: 650;
+            font-size: 27px;
+            line-height: .9;
+            letter-spacing: -1px
+        }
+
+        .brand span {
+            display: block;
+            font: 600 9px 'DM Sans', sans-serif;
+            letter-spacing: .28em;
+            margin-top: 9px
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 28px;
+            font-size: 13px;
+            font-weight: 700;
+            align-items: center
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--forest);
+            color: white;
+            border: 0;
+            border-radius: 100px;
+            padding: 16px 26px;
+            font-weight: 700;
+            font-size: 13px;
+            transition: transform .2s, background .2s
+        }
+
+        .pill:hover {
+            transform: translateY(-3px);
+            background: #315e4f
+        }
+
+        .pill.light {
+            background: var(--lime);
+            color: var(--forest)
+        }
+
+        .menu {
+            display: none;
+            border: 0;
+            background: none;
+            font-size: 25px
+        }
+
+        .hero {
+            background: var(--forest);
+            color: var(--cream);
+            min-height: 660px;
+            display: grid;
+            grid-template-columns: 1fr 48%;
+            overflow: hidden
+        }
+
+        .hero-copy {
+            padding: clamp(45px, 7vw, 110px) 6vw;
+            align-self: center
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: .24em;
+            font-weight: 700
+        }
+
+        .hero p {
+            font-size: 17px;
+            max-width: 470px;
+            color: #e0e9de
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 30px
+        }
+
+        .outline {
+            border: 1px solid #92b0a4;
+            border-radius: 100px;
+            padding: 15px 25px;
+            font-size: 13px;
+            font-weight: 700
+        }
+
+        .hero-image {
+            position: relative;
+            min-height: 540px
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            inset: 0
+        }
+
+        .stamp {
+            position: absolute;
+            bottom: 35px;
+            left: -65px;
+            width: 145px;
+            height: 145px;
+            border-radius: 100%;
+            background: var(--lime);
+            color: var(--forest);
+            display: grid;
+            place-items: center;
+            text-align: center;
+            transform: rotate(-12deg);
+            font: 650 21px Fraunces;
+            box-shadow: 0 15px 40px #0003
+        }
+
+        .marquee {
+            display: flex;
+            justify-content: space-around;
+            gap: 25px;
+            flex-wrap: wrap;
+            padding: 22px 5%;
+            background: var(--lime);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase
+        }
+
+        .section {
+            padding: 100px 6%
+        }
+
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+            margin-bottom: 35px
+        }
+
+        .section-head p {
+            max-width: 370px
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px
+        }
+
+        .service {
+            border-radius: 22px;
+            background: white;
+            overflow: hidden;
+            transition: transform .2s
+        }
+
+        .service:hover {
+            transform: translateY(-5px)
+        }
+
+        .service img {
+            height: 240px;
+            width: 100%;
+            object-fit: cover
+        }
+
+        .service .body {
+            padding: 25px
+        }
+
+        .service h3 {
+            font-size: 27px;
+            margin: 0
+        }
+
+        .service p {
+            font-size: 13px;
+            color: #66786f
+        }
+
+        .service .link {
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: .1em
+        }
+
+        .about {
+            background: #e9e9d9;
+            display: grid;
+            grid-template-columns: 46% 1fr;
+            gap: 7%;
+            align-items: center
+        }
+
+        .about img {
+            width: 100%;
+            height: 560px;
+            object-fit: cover;
+            border-radius: 220px 220px 20px 20px
+        }
+
+        .facts {
+            display: flex;
+            gap: 32px;
+            margin: 30px 0;
+            flex-wrap: wrap
+        }
+
+        .fact strong {
+            display: block;
+            font: 650 39px Fraunces
+        }
+
+        .fact small {
+            font-size: 11px;
+            letter-spacing: .1em;
+            text-transform: uppercase
+        }
+
+        .price {
+            background: var(--forest);
+            color: white
+        }
+
+        .price .section-head p {
+            color: #cddbd2
+        }
+
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px
+        }
+
+        .price-card {
+            background: #2b5145;
+            border: 1px solid #547366;
+            border-radius: 18px;
+            padding: 30px
+        }
+
+        .price-card strong {
+            font: 650 52px Fraunces;
+            color: var(--lime)
+        }
+
+        .price-card h3 {
+            font-size: 25px
+        }
+
+        .price-card p {
+            font-size: 13px;
+            color: #d2e1d6
+        }
+
+        .price-note {
+            font-size: 12px;
+            color: #c7d7cd;
+            margin-top: 25px
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr;
+            gap: 15px
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 370px;
+            object-fit: cover;
+            border-radius: 20px
+        }
+
+        .quote {
+            background: var(--peach);
+            text-align: center;
+            padding: 85px 6%
+        }
+
+        .quote blockquote {
+            font: 500 clamp(26px, 4vw, 53px) Fraunces;
+            line-height: 1.2;
+            max-width: 950px;
+            margin: 15px auto 30px
+        }
+
+        .quote small {
+            font-weight: 700
+        }
+
+        .faq {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 8%
+        }
+
+        .faq details {
+            border-bottom: 1px solid #cbd3c7;
+            padding: 21px 0
+        }
+
+        .faq summary {
+            font-weight: 700;
+            cursor: pointer
+        }
+
+        .faq details p {
+            font-size: 14px
+        }
+
+        .contact {
+            background: #e9e9d9;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 9%
+        }
+
+        .contact form {
+            display: grid;
+            gap: 13px;
+            background: white;
+            padding: 32px;
+            border-radius: 24px
+        }
+
+        .contact input,
+        .contact select,
+        .contact textarea {
+            width: 100%;
+            border: 1px solid #d2dcd2;
+            border-radius: 12px;
+            padding: 14px;
+            background: #fbfcf8
+        }
+
+        .contact label {
+            font-size: 12px;
+            font-weight: 700
+        }
+
+        .contact form button {
+            width: 100%
+        }
+
+        .footer {
+            background: #112d27;
+            color: white;
+            padding: 55px 6% 25px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 35px
+        }
+
+        .footer p {
+            font-size: 13px;
+            color: #b6cec0
+        }
+
+        .footer a {
+            display: block;
+            margin: 10px 0;
+            font-size: 13px
+        }
+
+        .footer .end {
+            grid-column: 1/-1;
+            border-top: 1px solid #49675b;
+            padding-top: 22px;
+            font-size: 11px;
+            color: #aec4b6
+        }
+
+        .float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 12;
+            box-shadow: 0 12px 30px #0003
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity .6s, transform .6s
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none
+        }
+
+        @media(max-width:950px) {
+
+            .cards,
+            .price-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .hero {
+                grid-template-columns: 1fr 45%
+            }
+
+            .hero h1 {
+                font-size: clamp(3.2rem, 6vw, 5rem)
+            }
+
+            .stamp {
+                left: -35px;
+                width: 110px;
+                height: 110px;
+                font-size: 16px
+            }
+
+            .navlinks {
+                gap: 13px
+            }
+        }
+
+        @media(max-width:680px) {
+            .nav {
+                height: 75px
+            }
+
+            .menu {
+                display: block
+            }
+
+            .navlinks {
+                display: none;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                right: 0;
+                background: var(--cream);
+                padding: 25px;
+                flex-direction: column;
+                align-items: stretch;
+                box-shadow: 0 15px 20px #0001
+            }
+
+            .navlinks.open {
+                display: flex
+            }
+
+            .hero {
+                grid-template-columns: 1fr
+            }
+
+            .hero-copy {
+                padding: 65px 7%
+            }
+
+            .hero-image {
+                min-height: 380px
+            }
+
+            .stamp {
+                left: auto;
+                right: 20px;
+                bottom: 20px
+            }
+
+            .section {
+                padding: 70px 6%
+            }
+
+            .section-head {
+                display: block
+            }
+
+            .cards,
+            .price-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .service img {
+                height: 170px
+            }
+
+            .service .body {
+                padding: 16px
+            }
+
+            .service h3 {
+                font-size: 22px
+            }
+
+            .about,
+            .faq,
+            .contact {
+                grid-template-columns: 1fr
+            }
+
+            .about img {
+                height: 390px
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .gallery img {
+                height: 240px
+            }
+
+            .gallery img:first-child {
+                grid-column: 1/-1
+            }
+
+            .footer {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .footer>div:first-child {
+                grid-column: 1/-1
+            }
+        }
+
+        @media(max-width:420px) {
+
+            .cards,
+            .price-grid {
+                grid-template-columns: 1fr
+            }
+
+            .service img {
+                height: 250px
+            }
+
+            .footer {
+                grid-template-columns: 1fr
+            }
+
+            .footer>div:first-child {
+                grid-column: auto
+            }
+        }
+    </style>
+<link rel="stylesheet" href="../../assets/css/demo.css">
+</head>
+
+<body>
+    <div class="notice">INDEPENDENT WEBSITE REDESIGN CONCEPT • NOT THE OFFICIAL WEBSITE</div>
+    <header class="nav"><a class="brand" href="#">short bark<br>& sides <span>THE DOG GROOMING STUDIO · LEEDS</span></a>
+        <nav class="navlinks" id="navlinks"><a href="#services">Our services</a><a href="#about">Meet Collette</a><a
+                href="#pricing">Pricing</a><a href="#gallery">The good dogs</a><a class="pill" href="#contact">Book a
+                groom ↗</a></nav><button class="menu" aria-label="Toggle menu" aria-expanded="false"
+            id="menu">☰</button>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-copy">
+                <div class="eyebrow">Meanwood, Leeds · Since 2010</div>
+                <h1>Good dogs.<br>Great <em>hair.</em><br>Big smiles.</h1>
+                <p>Because every pup deserves to leave feeling their absolute best. Thoughtful, friendly grooming for
+                    the dogs we adore.</p>
+                <div class="hero-actions"><a class="pill light" href="#contact">Book your pup in ↗</a><a class="outline"
+                        href="#services">Explore our services</a></div>
+            </div>
+            <div class="hero-image"><img
+                    src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=1200&q=85"
+                    alt="Dog enjoying a grooming session">
+                <div class="stamp">FRESH CUTS<br>HAPPY PUPS ✳</div>
+            </div>
+        </section>
+        <div class="marquee"><span>✳ One-to-one care</span><span>✳ All breeds welcome</span><span>✳ Expert hand
+                stripping</span><span>✳ Leeds local since 2010</span></div>
+        <section class="section" id="services">
+            <div class="section-head reveal">
+                <div>
+                    <div class="eyebrow">The pamper menu</div>
+                    <h2>Tail-wagging<br>treatments.</h2>
+                </div>
+                <p>From a quick freshen-up to a full makeover, every appointment is tailored to your dog's coat, comfort
+                    and character.</p>
+            </div>
+            <div class="cards">
+                <article class="service reveal"><img
+                        src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=650&q=80"
+                        alt="Dog portrait">
+                    <div class="body">
+                        <h3>Full Groom</h3>
+                        <p>A proper pamper: bathing, clipping, styling and finishing touches.</p><a class="link"
+                            href="#contact">Enquire ↗</a>
+                    </div>
+                </article>
+                <article class="service reveal"><img
+                        src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=650&q=80"
+                        alt="Terrier dog">
+                    <div class="body">
+                        <h3>Hand Stripping</h3>
+                        <p>Specialist coat care for wire-haired and rough-coated breeds.</p><a class="link"
+                            href="#contact">Enquire ↗</a>
+                    </div>
+                </article>
+                <article class="service reveal"><img
+                        src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=650&q=80"
+                        alt="Dogs playing">
+                    <div class="body">
+                        <h3>Puppy Hygiene</h3>
+                        <p>A gentle introduction to grooming for little first-timers.</p><a class="link"
+                            href="#contact">Enquire ↗</a>
+                    </div>
+                </article>
+                <article class="service reveal"><img
+                        src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=650&q=80"
+                        alt="Golden retriever">
+                    <div class="body">
+                        <h3>Microchipping</h3>
+                        <p>Ask about Peddymark microchipping for added peace of mind.</p><a class="link"
+                            href="#contact">Enquire ↗</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section about" id="about"><img class="reveal"
+                src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=950&q=85"
+                alt="Friendly dog portrait, illustrative photography">
+            <div class="reveal">
+                <div class="eyebrow">A friendly face behind the scissors</div>
+                <h2>Meet Collette.<br>Dog person,<br>through & through.</h2>
+                <p>Short Bark & Sides was founded by Collette Sykes in 2010, built on a lifelong love of dogs and the
+                    belief that grooming should feel personal, calm and caring.</p>
+                <p>With a particular passion for hand stripping and individual attention, Collette welcomes pups of all
+                    shapes and sizes to her Meanwood studio.</p>
+                <div class="facts">
+                    <div class="fact"><strong>2010</strong><small>Established</small></div>
+                    <div class="fact"><strong>1:1</strong><small>Individual care</small></div>
+                    <div class="fact"><strong>All</strong><small>Breeds welcome</small></div>
+                </div><a href="#contact" class="pill">Say hello ↗</a>
+            </div>
+        </section>
+        <section class="section price" id="pricing">
+            <div class="section-head">
+                <div>
+                    <div class="eyebrow">Straightforward pricing</div>
+                    <h2>Looking good<br>should feel good.</h2>
+                </div>
+                <p>Helpful starting prices from the existing business website. Your final quote depends on your dog's
+                    coat and grooming needs.</p>
+            </div>
+            <div class="price-grid">
+                <div class="price-card">
+                    <div class="eyebrow">Small dogs</div>
+                    <h3>Little legends</h3><strong>£40</strong>
+                    <p>From · e.g. terriers</p>
+                </div>
+                <div class="price-card">
+                    <div class="eyebrow">Medium dogs</div>
+                    <h3>Mid-size mates</h3><strong>£50</strong>
+                    <p>From · e.g. cockapoos</p>
+                </div>
+                <div class="price-card">
+                    <div class="eyebrow">Large dogs</div>
+                    <h3>Big softies</h3><strong>£60</strong>
+                    <p>From · e.g. labradoodles</p>
+                </div>
+                <div class="price-card">
+                    <div class="eyebrow">Very large dogs</div>
+                    <h3>Gentle giants</h3><strong>£80</strong>
+                    <p>From · e.g. Old English Sheepdogs</p>
+                </div>
+            </div>
+            <p class="price-note">Guide prices shown on the business's existing website. Please confirm current pricing
+                directly with the groomer before booking.</p>
+        </section>
+        <section class="section" id="gallery">
+            <div class="section-head">
+                <div>
+                    <div class="eyebrow">The happy-pup club</div>
+                    <h2>Too cute not<br>to show off.</h2>
+                </div>
+                <p>Illustrative dog photography for this concept. Replace with the salon's real before-and-after photos
+                    before launch.</p>
+            </div>
+            <div class="gallery"><img loading="lazy"
+                    src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=900&q=80"
+                    alt="Happy dog"><img loading="lazy"
+                    src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=700&q=80"
+                    alt="Dog enjoying the outdoors"><img loading="lazy"
+                    src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=700&q=80"
+                    alt="Cute dog"></div>
+        </section>
+        <section class="quote">
+            <div class="eyebrow">Kind words from a customer</div>
+            <blockquote>“Both came away looking ready for the show ring.”</blockquote><small>— Frank & Mary Jones ·
+                Testimonial from the existing website</small>
+        </section>
+        <section class="section faq">
+            <div>
+                <div class="eyebrow">Good to know</div>
+                <h2>Questions?<br>We've got<br>your tail.</h2>
+                <p>Need something else? Give the salon a ring — we're happy to help you find the right groom.</p>
+            </div>
+            <div>
+                <details open>
+                    <summary>Do you groom all dog breeds?</summary>
+                    <p>Yes, the salon states that it caters for all breeds, from small terriers to larger dogs.</p>
+                </details>
+                <details>
+                    <summary>Do I need an appointment?</summary>
+                    <p>Yes. Grooming is by advance appointment so each dog receives individual attention.</p>
+                </details>
+                <details>
+                    <summary>Can I book hand stripping?</summary>
+                    <p>Yes. Collette specialises in hand stripping wire-haired breeds. Ask about your dog's coat when
+                        enquiring.</p>
+                </details>
+                <details>
+                    <summary>Are the prices fixed?</summary>
+                    <p>No. Published prices are starting guides; the final price depends on your dog's coat and needs.
+                    </p>
+                </details>
+            </div>
+        </section>
+        <section class="section contact" id="contact">
+            <div>
+                <div class="eyebrow">Let's get fluffy</div>
+                <h2>Ready for a<br>fresh start?</h2>
+                <p>Tell us a little about your best friend and the groom you're looking for. This concept form opens
+                    your email app rather than sending data to a live booking system.</p>
+                <p><strong>Visit:</strong> Unit 1, Providence House, Authorpe Road, Meanwood, Leeds LS6 4JB</p>
+                <p><strong>Call:</strong> <a href="tel:+447802444484">07802 444484</a></p><a
+                    href="https://www.google.com/maps/search/?api=1&query=Providence+House+Authorpe+Road+Meanwood+Leeds+LS6+4JB"
+                    target="_blank" rel="noopener">Get directions ↗</a>
+            </div>
+            <form id="enquiry"><label for="owner">Your name</label><input id="owner" required
+                    placeholder="Your name"><label for="dog">Your dog's name</label><input id="dog" required
+                    placeholder="Your dog's name"><label for="phone">Your contact number</label><input id="phone"
+                    type="tel" required placeholder="07..."><label for="service">What does your pup need?</label><select
+                    id="service">
+                    <option>Full groom</option>
+                    <option>Hand stripping</option>
+                    <option>Puppy hygiene</option>
+                    <option>Microchipping enquiry</option>
+                    <option>Not sure yet</option>
+                </select><label for="message">Anything we should know?</label><textarea id="message" rows="4"
+                    placeholder="Breed, coat, preferred day, etc."></textarea><button class="pill" type="submit">Prepare
+                    my enquiry ↗</button><small>This demo does not collect or store your details. Your email app will
+                    open with a draft.</small></form>
+        </section>
+    </main>
+    <footer class="footer">
+        <div>
+            <div class="brand">short bark<br>& sides<span>THE DOG GROOMING STUDIO · LEEDS</span></div>
+            <p>Good dogs. Great hair. Big smiles.<br>Independent grooming in Meanwood, Leeds.</p>
+        </div>
+        <div><strong>Explore</strong><a href="#services">Services</a><a href="#pricing">Pricing</a><a
+                href="#about">About Collette</a><a href="#contact">Contact</a></div>
+        <div><strong>Find us</strong><a href="tel:+447802444484">07802 444484</a><a href="https://shortbarksides.co.uk/"
+                target="_blank" rel="noopener">Official website ↗</a><a href="#contact">Meanwood, Leeds</a></div>
+        <div class="end">© <span id="year"></span> Short Bark & Sides · Unofficial website redesign concept, not
+            affiliated with the business. All photos are illustrative. No live booking or payment functionality.</div>
+    </footer><a href="#contact" class="pill light float">Book a groom ↗</a>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear(); const menu = document.getElementById('menu'), nav = document.getElementById('navlinks'); menu.onclick = () => { const open = nav.classList.toggle('open'); menu.setAttribute('aria-expanded', open); menu.textContent = open ? '✕' : '☰' }; nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); menu.textContent = '☰'; menu.setAttribute('aria-expanded', 'false') })); const observer = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target) } }), { threshold: .08 }); document.querySelectorAll('.reveal').forEach(el => observer.observe(el)); document.getElementById('enquiry').addEventListener('submit', e => { e.preventDefault(); const get = id => document.getElementById(id).value; const body = `Hello Collette,\n\nI'd like to enquire about grooming.\n\nName: ${get('owner')}\nDog: ${get('dog')}\nPhone: ${get('phone')}\nService: ${get('service')}\nDetails: ${get('message')}\n\nThank you!`; window.location.href = 'mailto:?subject=' + encodeURIComponent('Short Bark & Sides grooming enquiry') + '&body=' + encodeURIComponent(body); alert('Your email app will open with an enquiry draft. Please add the salon’s confirmed email address before sending, or call 07802 444484.') });
+    </script>
+<script src="../../assets/js/demo.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+        content="Rebel & Rose — independent boutique in Chapel Allerton, Leeds. Discover beautiful leather bags, thoughtful gifts and private shopping experiences.">
+    <title>Rebel & Rose | Independent Boutique · Chapel Allerton</title>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+
+        :root {
+            --ink: #29271f;
+            --paper: #f8f5ef;
+            --rose: #ad5e5c;
+            --line: #ddd5c9;
+            --sage: #e6e7dd
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: 'DM Sans', sans-serif
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit
+        }
+
+        button {
+            cursor: pointer
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: #f8f5eff2;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .announce {
+            background: #303a32;
+            color: #fff;
+            text-align: center;
+            font-size: 11px;
+            letter-spacing: .14em;
+            padding: 9px
+        }
+
+        .nav {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1380px;
+            margin: auto;
+            padding: 0 5%
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 31px;
+            letter-spacing: -.05em
+        }
+
+        .logo span {
+            color: var(--rose)
+        }
+
+        .links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: .12em
+        }
+
+        .links a:hover {
+            color: var(--rose)
+        }
+
+        .btn {
+            border: 1px solid var(--ink);
+            padding: 15px 23px;
+            background: var(--ink);
+            color: white;
+            display: inline-flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: .15em;
+            font-weight: 700;
+            transition: .25s
+        }
+
+        .btn:hover {
+            background: var(--rose);
+            border-color: var(--rose);
+            transform: translateY(-2px)
+        }
+
+        .btn.light {
+            background: transparent;
+            color: var(--ink)
+        }
+
+        .btn.light:hover {
+            background: var(--ink);
+            color: white
+        }
+
+        .hamb {
+            display: none;
+            border: 0;
+            background: none;
+            font-size: 26px
+        }
+
+        .hero {
+            min-height: 700px;
+            display: grid;
+            grid-template-columns: 43% 57%;
+            background: #e9e3d8
+        }
+
+        .hero-copy {
+            padding: 12% 8% 10% 13%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: .23em;
+            font-weight: 700;
+            color: var(--rose)
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500
+        }
+
+        h1 {
+            font-size: clamp(65px, 7vw, 120px);
+            line-height: .95;
+            letter-spacing: -.065em;
+            margin: 27px 0
+        }
+
+        h1 em {
+            color: var(--rose);
+            font-weight: 500
+        }
+
+        p {
+            line-height: 1.8;
+            color: #66635c
+        }
+
+        .hero-copy p {
+            max-width: 450px;
+            font-size: 15px
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 28px
+        }
+
+        .hero-photo {
+            background: url('https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=1600&q=85') center/cover;
+            position: relative
+        }
+
+        .hero-photo:after {
+            content: 'CURATED WITH CHARACTER  •  CHAPEL ALLERTON';
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background: #f8f5efeb;
+            padding: 17px 22px;
+            font-size: 10px;
+            letter-spacing: .16em
+        }
+
+        .ticker {
+            padding: 19px;
+            text-align: center;
+            letter-spacing: .19em;
+            text-transform: uppercase;
+            font-size: 11px;
+            border-bottom: 1px solid var(--line)
+        }
+
+        .ticker b {
+            color: var(--rose);
+            margin: 0 30px
+        }
+
+        section {
+            padding: 105px 6%
+        }
+
+        .wrap {
+            max-width: 1280px;
+            margin: auto
+        }
+
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+            margin-bottom: 45px
+        }
+
+        .section-head h2 {
+            font-size: clamp(40px, 5vw, 70px);
+            letter-spacing: -.045em;
+            line-height: 1.05;
+            margin: 12px 0
+        }
+
+        .section-head p {
+            max-width: 390px
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px
+        }
+
+        .category {
+            position: relative;
+            overflow: hidden;
+            min-height: 460px;
+            background: #ddd
+        }
+
+        .category img {
+            width: 100%;
+            height: 460px;
+            object-fit: cover;
+            transition: .6s
+        }
+
+        .category:hover img {
+            transform: scale(1.07)
+        }
+
+        .category:after {
+            content: '';
+            position: absolute;
+            inset: 30% 0 0;
+            background: linear-gradient(transparent, #1617119e)
+        }
+
+        .category-content {
+            position: absolute;
+            z-index: 1;
+            bottom: 32px;
+            left: 32px;
+            color: #fff
+        }
+
+        .category-content h3 {
+            font-size: 35px;
+            margin: 0 0 10px
+        }
+
+        .category-content span {
+            font-size: 11px;
+            letter-spacing: .15em;
+            text-transform: uppercase
+        }
+
+        .story {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8%;
+            align-items: center
+        }
+
+        .story-image {
+            position: relative
+        }
+
+        .story-image img {
+            width: 100%;
+            height: 650px;
+            object-fit: cover
+        }
+
+        .story-image .stamp {
+            position: absolute;
+            bottom: -22px;
+            right: -22px;
+            background: var(--rose);
+            color: white;
+            padding: 28px;
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            max-width: 210px;
+            text-align: center
+        }
+
+        .story h2,
+        .experience h2,
+        .contact h2 {
+            font-size: clamp(45px, 5vw, 75px);
+            line-height: 1.06;
+            letter-spacing: -.05em
+        }
+
+        .story p {
+            max-width: 510px
+        }
+
+        .quote {
+            background: #313b34;
+            color: #fff;
+            text-align: center;
+            padding: 95px 20px
+        }
+
+        .quote h2 {
+            font-size: clamp(35px, 5vw, 62px);
+            max-width: 900px;
+            margin: 15px auto
+        }
+
+        .quote p {
+            color: #d3d8d0
+        }
+
+        .experience {
+            background: var(--sage)
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 9%;
+            align-items: center
+        }
+
+        .experience img {
+            width: 100%;
+            height: 570px;
+            object-fit: cover
+        }
+
+        .feature-list {
+            display: grid;
+            gap: 20px;
+            margin: 28px 0 35px
+        }
+
+        .feature {
+            border-top: 1px solid #bfc3b7;
+            padding-top: 18px
+        }
+
+        .feature b {
+            font-size: 14px
+        }
+
+        .feature p {
+            font-size: 13px;
+            margin: 5px 0
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10%
+        }
+
+        .contact h2 {
+            margin-top: 12px
+        }
+
+        .details {
+            margin: 35px 0;
+            display: grid;
+            gap: 16px
+        }
+
+        .details div {
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--line)
+        }
+
+        .details small {
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+            color: var(--rose);
+            margin-bottom: 6px
+        }
+
+        .contact-form {
+            background: white;
+            padding: 38px;
+            border: 1px solid var(--line)
+        }
+
+        .contact-form h3 {
+            font-size: 31px;
+            margin: 0 0 15px
+        }
+
+        .field {
+            margin: 16px 0
+        }
+
+        .field label {
+            display: block;
+            font-size: 11px;
+            letter-spacing: .13em;
+            text-transform: uppercase;
+            margin-bottom: 9px
+        }
+
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            border: 1px solid #d8d1c8;
+            padding: 14px;
+            background: #faf8f4;
+            color: var(--ink);
+            outline: none
+        }
+
+        .field input:focus,
+        .field textarea:focus {
+            border-color: var(--rose)
+        }
+
+        .contact-form .btn {
+            width: 100%
+        }
+
+        .note {
+            font-size: 11px
+        }
+
+        .map {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            filter: grayscale(.5)
+        }
+
+        footer {
+            background: #292f2a;
+            color: #fff;
+            padding: 55px 6% 20px
+        }
+
+        .footer-grid {
+            max-width: 1280px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 30px
+        }
+
+        footer p,
+        footer a {
+            color: #d5d7d0
+        }
+
+        footer a:hover {
+            color: #fff
+        }
+
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 45px auto 0;
+            border-top: 1px solid #5d665e;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #b7beb7;
+            gap: 20px
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity .7s, transform .7s
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: none
+        }
+
+        @media(max-width:850px) {
+            .hamb {
+                display: block
+            }
+
+            .links {
+                display: none;
+                position: absolute;
+                top: 112px;
+                left: 0;
+                right: 0;
+                background: var(--paper);
+                padding: 30px;
+                flex-direction: column;
+                align-items: start;
+                border-bottom: 1px solid var(--line)
+            }
+
+            .links.open {
+                display: flex
+            }
+
+            .nav {
+                height: 70px
+            }
+
+            .hero {
+                grid-template-columns: 1fr
+            }
+
+            .hero-copy {
+                padding: 80px 7%
+            }
+
+            .hero-photo {
+                min-height: 450px
+            }
+
+            .categories,
+            .story,
+            .experience-grid,
+            .contact-grid {
+                grid-template-columns: 1fr
+            }
+
+            .story-image img,
+            .experience img {
+                height: 450px
+            }
+
+            .story-image .stamp {
+                right: 10px
+            }
+
+            .section-head {
+                display: block
+            }
+
+            .category,
+            .category img {
+                min-height: 390px;
+                height: 390px
+            }
+
+            section {
+                padding: 70px 6%
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .footer-grid>div:first-child {
+                grid-column: span 2
+            }
+        }
+
+        @media(max-width:520px) {
+            .categories {
+                grid-template-columns: 1fr
+            }
+
+            .logo {
+                font-size: 27px
+            }
+
+            .hero-photo {
+                min-height: 340px
+            }
+
+            .ticker b {
+                margin: 0 8px
+            }
+
+            .footer-bottom {
+                display: block
+            }
+
+            .contact-form {
+                padding: 22px
+            }
+
+            .hero-photo:after {
+                font-size: 8px;
+                right: 12px;
+                bottom: 12px
+            }
+
+            h1 {
+                font-size: 68px
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            html {
+                scroll-behavior: auto
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="../../assets/css/demo.css">
+</head>
+
+<body>
+    <div class="announce">Independent boutique • Chapel Allerton, Leeds • Shop small, find something special</div>
+    <header>
+        <nav class="nav"><a class="logo" href="#home">REBEL <span>&</span> ROSE</a><button class="hamb"
+                aria-label="Toggle menu" aria-expanded="false" id="menuBtn">☰</button>
+            <div class="links" id="links"><a href="#collections">Discover</a><a href="#story">Our story</a><a
+                    href="#experiences">Private shopping</a><a href="#visit">Visit us</a><a class="btn"
+                    href="tel:+447792590316">Call the boutique ↗</a></div>
+        </nav>
+    </header>
+    <main>
+        <div class="hero" id="home">
+            <div class="hero-copy">
+                <div class="eyebrow">A little different. A lot to love.</div>
+                <h1>Style with <em>a little</em> rebellion.</h1>
+                <p>Beautiful leather bags, unexpected gifts and the joy of finding something you didn't know you needed.
+                    Your independent boutique in the heart of Chapel Allerton.</p>
+                <div class="actions"><a class="btn" href="#collections">Explore the boutique ↗</a><a class="btn light"
+                        href="#visit">Plan your visit</a></div>
+            </div>
+            <div class="hero-photo" role="img" aria-label="Editorial photograph of a leather handbag"></div>
+        </div>
+        <div class="ticker">Independent spirit <b>✳</b> Thoughtfully chosen <b>✳</b> Made to be loved <b>✳</b> Chapel
+            Allerton</div>
+        <section id="collections">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <div>
+                        <div class="eyebrow">The Rebel & Rose edit</div>
+                        <h2>Find your next<br><i>favourite thing.</i></h2>
+                    </div>
+                    <p>From everyday essentials to the perfect present, our boutique is filled with discoveries worth
+                        stepping inside for. Product imagery is illustrative for this concept.</p>
+                </div>
+                <div class="categories"><a class="category reveal" href="#visit"><img loading="lazy"
+                            src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=900&q=80"
+                            alt="Leather handbag">
+                        <div class="category-content">
+                            <h3>Beautiful bags</h3><span>Discover in store →</span>
+                        </div>
+                    </a><a class="category reveal" href="#visit"><img loading="lazy"
+                            src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=900&q=80"
+                            alt="Jewellery and accessories">
+                        <div class="category-content">
+                            <h3>Little luxuries</h3><span>Discover in store →</span>
+                        </div>
+                    </a><a class="category reveal" href="#visit"><img loading="lazy"
+                            src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=900&q=80"
+                            alt="Wrapped gifts">
+                        <div class="category-content">
+                            <h3>Thoughtful gifts</h3><span>Discover in store →</span>
+                        </div>
+                    </a></div>
+            </div>
+        </section>
+        <section id="story" style="background:#eee9e1">
+            <div class="wrap story">
+                <div class="story-image reveal"><img loading="lazy"
+                        src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1100&q=85"
+                        alt="Inviting independent boutique interior">
+                    <div class="stamp">Not your ordinary high street shop.</div>
+                </div>
+                <div class="reveal">
+                    <div class="eyebrow">Hello from Chapel Allerton</div>
+                    <h2>Small shop.<br>Big personality.</h2>
+                    <p>Rebel & Rose is an independent boutique founded by Rachael, with a love for gorgeous leather
+                        bags, carefully chosen pieces and gifts with character.</p>
+                    <p>Our favourite part? Helping you find the one. The bag you carry everywhere. The gift that makes
+                        someone's day. The little treat that feels just right.</p>
+                    <p>Pop in, have a browse and see what catches your eye.</p><a class="btn" href="#visit">Come say
+                        hello ↗</a>
+                </div>
+            </div>
+        </section>
+        <div class="quote">
+            <div class="eyebrow" style="color:#e2b6aa">A different kind of shopping experience</div>
+            <h2>“Come in for a look. Leave with something you love.”</h2>
+            <p>Curated finds • Friendly faces • Independent Leeds</p>
+        </div>
+        <section class="experience" id="experiences">
+            <div class="wrap experience-grid">
+                <div class="reveal">
+                    <div class="eyebrow">Make it an occasion</div>
+                    <h2>Your own little<br><i>sip & shop.</i></h2>
+                    <p>Shopping is even better together. Rebel & Rose offers private sip-and-shop gatherings — a lovely
+                        way to get your friends together and explore the boutique.</p>
+                    <div class="feature-list">
+                        <div class="feature"><b>Gather your people</b>
+                            <p>Perfect for a catch-up, celebration or simply an excuse to shop together.</p>
+                        </div>
+                        <div class="feature"><b>Discover something special</b>
+                            <p>Browse the boutique's handpicked finds in a relaxed setting.</p>
+                        </div>
+                        <div class="feature"><b>Ask us about availability</b>
+                            <p>Get in touch to discuss the details and what might be possible.</p>
+                        </div>
+                    </div><a class="btn" href="#enquiry">Enquire about a private event ↗</a>
+                </div><img class="reveal" loading="lazy"
+                    src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd47?w=1100&q=85"
+                    alt="Fashion boutique clothing and accessories">
+            </div>
+        </section>
+        <section id="visit" class="contact">
+            <div class="wrap contact-grid">
+                <div class="reveal">
+                    <div class="eyebrow">We'd love to meet you</div>
+                    <h2>Find us in<br><i>Chapel Allerton.</i></h2>
+                    <p>A warm welcome, a good browse and something lovely waiting to be discovered.</p>
+                    <div class="details">
+                        <div><small>Address</small>4 Stainbeck Corner, Chapel Allerton, Leeds LS7 3PG</div>
+                        <div><small>Opening hours</small>Monday – Saturday · 9:30am – 5:00pm<br>Sunday · Please check
+                            before visiting</div>
+                        <div><small>Telephone</small><a href="tel:+447792590316">07792 590316</a></div>
+                        <div><small>Social</small><a target="_blank" rel="noopener"
+                                href="https://www.instagram.com/rebel_and_rose/">Instagram ↗</a> &nbsp; <a
+                                target="_blank" rel="noopener" href="https://www.facebook.com/rebel.and.rose4">Facebook
+                                ↗</a></div>
+                    </div><a class="btn" target="_blank" rel="noopener"
+                        href="https://www.google.com/maps/search/?api=1&query=4+Stainbeck+Corner+Leeds+LS7+3PG">Get
+                        directions ↗</a>
+                    <div style="margin-top:25px"><iframe class="map" title="Map showing Rebel & Rose in Chapel Allerton"
+                            loading="lazy"
+                            src="https://www.google.com/maps?q=4%20Stainbeck%20Corner%20Leeds%20LS7%203PG&output=embed"></iframe>
+                    </div>
+                </div>
+                <div id="enquiry" class="contact-form reveal">
+                    <div class="eyebrow">Get in touch</div>
+                    <h3>Something on your mind?</h3>
+                    <p>Looking for a gift, have a question or thinking about a private shopping gathering? Send a quick
+                        enquiry.</p>
+                    <form id="enquiryForm">
+                        <div class="field"><label for="name">Your name</label><input id="name" required maxlength="100"
+                                placeholder="Jane Smith"></div>
+                        <div class="field"><label for="email">Email address</label><input id="email" type="email"
+                                required placeholder="jane@example.com"></div>
+                        <div class="field"><label for="topic">What's it about?</label><select id="topic">
+                                <option>General enquiry</option>
+                                <option>Private sip & shop</option>
+                                <option>Product availability</option>
+                                <option>Something else</option>
+                            </select></div>
+                        <div class="field"><label for="message">Your message</label><textarea id="message" rows="5"
+                                required maxlength="1500"
+                                placeholder="Tell us a little about what you're looking for..."></textarea></div><button
+                            class="btn" type="submit">Prepare enquiry ↗</button>
+                        <p class="note">Demo feature: this opens a prepared message in your email app. It does not
+                            submit data to the boutique.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <div class="logo">REBEL <span>&</span> ROSE</div>
+                <p>Independent style, thoughtful gifts and a little bit of rebellion. Chapel Allerton, Leeds.</p>
+            </div>
+            <div><b>Explore</b>
+                <p><a href="#collections">The boutique</a></p>
+                <p><a href="#story">Our story</a></p>
+                <p><a href="#experiences">Private shopping</a></p>
+            </div>
+            <div><b>Say hello</b>
+                <p><a href="tel:+447792590316">07792 590316</a></p>
+                <p><a href="#visit">Visit the shop</a></p>
+                <p><a href="https://www.instagram.com/rebel_and_rose/">Instagram</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 Rebel & Rose — design concept only</span><span>Unofficial portfolio
+                demo. Not affiliated with or commissioned by Rebel & Rose. Photos are illustrative; no online purchases
+                are processed.</span></div>
+    </footer>
+    <script>const b = document.getElementById('menuBtn'), n = document.getElementById('links'); b.onclick = () => { const open = n.classList.toggle('open'); b.setAttribute('aria-expanded', String(open)); b.textContent = open ? '✕' : '☰' }; n.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { n.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); b.textContent = '☰' })); if ('IntersectionObserver' in window) { const ob = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); ob.unobserve(e.target) } }), { threshold: .08 }); document.querySelectorAll('.reveal').forEach(e => ob.observe(e)) } else document.querySelectorAll('.reveal').forEach(e => e.classList.add('show')); document.getElementById('enquiryForm').addEventListener('submit', e => { e.preventDefault(); const v = id => document.getElementById(id).value; const subject = encodeURIComponent('Rebel & Rose enquiry: ' + v('topic')); const body = encodeURIComponent('Name: ' + v('name') + '\nEmail: ' + v('email') + '\nTopic: ' + v('topic') + '\n\n' + v('message')); window.location.href = 'mailto:?subject=' + subject + '&body=' + body; alert('Your email app will open with a draft. The boutique email address has not been verified; please address it to the shop after confirming their contact email.'); });</script>
+    <script src="../../assets/js/demo.js" defer></script>
+</body>
+
+</html>
